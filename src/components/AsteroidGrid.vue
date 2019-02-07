@@ -25,7 +25,7 @@
                 <td>{{getCloseApproachDate(a)}}</td> 
                 <td> 
                     <ul v-if="a.close_approach_data[0]"> 
-                        <li v-for="(value, key) in a.close_approach_data[0].miss_distance"> 
+                        <li v-bind:key="key" v-for="(value, key) in a.close_approach_data[0].miss_distance"> 
                             {{key}}: {{value}} 
                         </li> 
                     </ul> 
